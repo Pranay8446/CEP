@@ -13,4 +13,4 @@ const busModel = mongoose.Schema({
     stopes : [stopModel]
 })
 
-module.exports = mongoose.model("bus" , busModel)
+module.exports = mongoose.model("Bus" , busModel)
