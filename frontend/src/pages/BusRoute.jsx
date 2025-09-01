@@ -1,8 +1,11 @@
 import React from 'react'
+import BusRouteInfo from '../components/BusRouteInfo'
 
 const BusRoute = () => {
   return (
-    <div>BusRoute</div>
+    <div>
+        <BusRouteInfo />
+    </div>
   )
 }
 

@@ -1,6 +1,4 @@
-import { useState } from "react"
-
-const { createContext } = require("react")
+import { useState , createContext, useEffect } from "react"
 
 const tempInfo = [
   {
@@ -79,19 +77,18 @@ const tempInfo = [
 
 
 
-const BusInfoContext = createContext()
+export const BusInfoContext = createContext();
 
-export const BusInfoProvider = ({children}) => {
+export const BusInfoProvider = ({ children }) => {
+  const [busInfo, setBusInfo] = useState([]);
 
-  const [busInfo, setBusInfo] = useState(null)
+  useEffect(() => {
+    setBusInfo(tempInfo);
+  }, []);
 
-  setBusInfo(tempInfo)
-
-  console.log(busInfo);
-  
-    return (
-        <BusInfoContext.Provider >
-          <children />
-        </BusInfoContext.Provider>
-    )
-}
+  return (
+    <BusInfoContext.Provider value={{ busInfo, setBusInfo }}>
+      {children}
+    </BusInfoContext.Provider>
+  );
+};
