@@ -7,6 +7,7 @@ const BusList = () => {
     const {busInfo} = useContext(BusInfoContext)
     console.log(busInfo);
     
+    // make list of bus from div
   return (
     <div>
         
