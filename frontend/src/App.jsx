@@ -18,7 +18,11 @@ const App = () => {
         {/* admin register page */}
         <Route path='/admin/register' element = {<Register />} />  
         {/* <Route path='/admin/timetables' element = {<Login />} /> */}
-        {/* <Route path='/admin/routes' element = {<Login />} /> */}
+        <Route path='/admin/routes' element = {<Login />} />
+
+        <Route path='/admin/buses' element = {<Login />} />
+
+        <Route path='/admin/stops' element = {<Login />} />
       </Routes>
     </div>
   )

@@ -3,11 +3,19 @@ dotenv.config()
 const express = require("express");
 const app = express();
 const connectDB = require("./config/db")
+const busRoutes = require("./routes/busRoutes")
 
 connectDB()
 
 app.get("/", (req, res)=>{
     res.send("Heelo")
 })
+
+app.use(express.json())
+app.use(express.urlencoded({extended : true}))
+
+
+app.use("/bus", busRoutes)
+
 
 module.exports = app
