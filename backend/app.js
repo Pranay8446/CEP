@@ -4,6 +4,9 @@ const express = require("express");
 const app = express();
 const connectDB = require("./config/db")
 const busRoutes = require("./routes/busRoutes")
+const cors = require("cors")
+
+app.use(cors())
 
 connectDB()
 

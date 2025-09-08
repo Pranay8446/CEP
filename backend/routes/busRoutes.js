@@ -5,6 +5,8 @@ const busControllers = require("../controllers/busControllers")
 
 router.post("/create-bus" , busControllers.createBus)
 
+router.get("/get-all-buses" , busControllers.getAllBuses)
+
 router.delete("/delete-bus/:id" , busControllers.deleteBus)
 
 module.exports = router

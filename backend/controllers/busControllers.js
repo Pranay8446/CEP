@@ -18,6 +18,22 @@ module.exports.createBus = async (req, res) => {
     }       
 }
 
+module.exports.getAllBuses = async (req, res) => {
+    try {
+        const buses = await busModel.find()
+        res.status(200).json({
+            success : true,
+            message : "Buses fetched successfully",
+            buses
+        })
+    } catch (error) {
+        res.status(500).json({
+            success : false,
+            message : error.message
+        })
+    }    
+}
+
 module.exports.deleteBus = async (req, res) => {
     try {
         const { id } = req.params 
