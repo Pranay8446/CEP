@@ -7,6 +7,7 @@ import Register from './pages/Register'
 import AdminDashboard from './pages/AdminDashboard'
 import BusInfo from './pages/BusInfo'
 import AddBus from './pages/Bus/AddBus'
+import BusRouteInfo from './components/BusInfo/BusRouteInfo'
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         {/* Show entire timetable */}
         <Route path='/' element = {<Home />} />
         {/* Routes display for specific bus */}
-        <Route path='/timetable/:id' element = {<BusRoute />} />
+        <Route path='/timetable/:id' element = {<BusRouteInfo />} />
         {/* admin login page */}
         <Route path='/admin/login' element = {<Login />} />  
         {/* admin register page */}
