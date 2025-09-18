@@ -8,6 +8,8 @@ import AdminDashboard from './pages/AdminDashboard'
 import BusInfo from './pages/BusInfo'
 import AddBus from './pages/Bus/AddBus'
 import BusRouteInfo from './components/BusInfo/BusRouteInfo'
+import SearchStop from './components/Search/SearchStop'
+
 
 const App = () => {
   return (
@@ -28,6 +30,7 @@ const App = () => {
         <Route path='/admin/buses' element = {<BusInfo />} />
         <Route path='/admin/buses/add' element = {<AddBus />} />
         <Route path='/admin/stops' element = {<Login />} />
+        <Route path="/search-stop" element={<SearchStop />} />
       </Routes>
     </div>
   )
